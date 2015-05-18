@@ -10,7 +10,7 @@ unset GIT_DIR
 umask 077
 
 # Load common
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/common
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/common
 
 # Configure versions
 NGINX_VERSION='1.8.0' #1.7.10
@@ -36,18 +36,18 @@ PHP_PECL_CONFIGURE=( )
 
 # Setup dir references
 ROOT_DIR=${OPENSHIFT_RUNTIME_DIR}
-BUILD_DIR=${OPENSHIFT_TMP_DIR}/build
-CONFIG_DIR=${OPENSHIFT_DIY_DIR}/conf
-TEMPLATE_DIR=${OPENSHIFT_REPO_DIR}/.openshift/tmpl
+BUILD_DIR=${OPENSHIFT_TMP_DIR}build
+CONFIG_DIR=${OPENSHIFT_DIY_DIR/conf
+TEMPLATE_DIR=${OPENSHIFT_REPO_DIR}.openshift/tmpl
 
 # Push the libs path to the PATH
 export PATH=${ROOT_DIR}/libs/bin:$PATH
 
 # Load functions
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_util
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_nginx
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php_libs
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_php
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_util
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_nginx
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_php_libs
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_php
 
 # Check nginx
 check_nginx
@@ -61,5 +61,5 @@ for ext in "${!PHP_PECL[@]}"; do
 done
 
 # Extra
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_node
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/build_phalcon
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_node
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/build_phalcon

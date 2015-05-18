@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/common
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/common
 
 echo "Stopping nginx."
 if [ -f ${OPENSHIFT_RUN_DIR}/nginx.pid ];then

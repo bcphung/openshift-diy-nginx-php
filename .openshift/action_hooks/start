@@ -5,7 +5,7 @@
 
 set -e
 
-source ${OPENSHIFT_REPO_DIR}/.openshift/action_hooks/common
+source ${OPENSHIFT_REPO_DIR}.openshift/action_hooks/common
 
 echo "Starting nginx."
 ${OPENSHIFT_RUNTIME_DIR}/nginx/sbin/nginx
