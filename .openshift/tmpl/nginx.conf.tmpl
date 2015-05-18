@@ -135,7 +135,7 @@ http {
         location ~ ^/index\.php(/|$) {
             fastcgi_pass unix:${OPENSHIFT_RUN_DIR}/php-fpm.socket;
 
-            fastcgi_param SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             fastcgi_param PATH_INFO $fastcgi_script_name;
 
             include fastcgi_params;
