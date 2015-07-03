@@ -14,7 +14,7 @@ umask 077
 mkdir -p ${BUILD_DIR}
 
 echo "Pre-processing nginx config."
-cp ${TEMPLATE_DIR}/nginx.conf.tmpl ${BUILD_DIR}/nginx.conf
+cp ${TEMPLATE_DIR}/nginx-phalcon.conf.tmpl ${BUILD_DIR}/nginx.conf
 perl -p -i -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg' ${BUILD_DIR}/nginx.conf
 cp ${BUILD_DIR}/nginx.conf ${NGINX_DIR}/conf/nginx.conf
 
